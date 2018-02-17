@@ -1,0 +1,6 @@
+<ul *ngIf="data">
+  <li *ngFor="let node of data">
+    <a>{{ node.toDisplay }}</a>
+    <app-tree-node *ngIf="node.child && node.child.length" [data]="node.child"></app-tree-node>
+  </li>
+</ul>
